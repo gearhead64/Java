@@ -1,0 +1,25 @@
+배열공부#1
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int[] score = new int[5]; //길이가 5인 배열 생성
+        int k = 1;
+        
+        score[0] = 50;
+        score[1] = 60;
+        score[k+1] = 70; // k=1 이므로 1+1=2 즉,[2]
+        score[3] = 80;
+        score[4] = 90;
+        
+        int tmp = score[k+2] + score[4]; // tmp에 score[3]+score[4]=score[7] 저장
+        
+        for(int i=0; i < 5; i++) {   // i는 0부터 4까지 1씩 증가
+            System.out.printf("score[%d]:%d%n",i,score[i]); // socre[0]~score[4]출력
+        }
+        System.out.printf("tmp:%d%n",tmp); //tmp값 출력
+        System.out.printf("score[%d]:%d%n",7,score[7]); // score[7] 출력,score[7]은 범위를 벗어남 즉, 오류
+    }
+}
